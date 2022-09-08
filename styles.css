@@ -1,0 +1,17 @@
+.carousel-item {
+  width: 100%;
+}
+
+.carousel-item.color-black {
+  background-color: black;
+}
+
+.carousel-item img,
+.carousel-item video {
+  height: 100vh;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
