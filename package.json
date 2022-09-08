@@ -1,20 +1,21 @@
 {
-  "name": "react-flickity-example",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "centennials-nextapp",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
-  "author": "",
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "flickity": "^2.2.1",
-    "next": "^9.0.6",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-flickity-component": "^3.6.0"
+    "flickity": "^3.0.0",
+    "next": "12.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0"
   }
 }

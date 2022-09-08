@@ -1,9 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Flickity from "react-flickity-component";
-
-import "../styles.css";
-import "flickity/css/flickity.css";
+import Image from 'next/image'
+import styles from '../styles/Home.module.css'
+import Flickity from 'react-flickity-component'
+import "flickity/css/flickity.css"
 
 const flickityOptions = {
   prevNextButtons: false,
@@ -14,10 +12,28 @@ function Carousel() {
   return (
     <Flickity options={flickityOptions}>
       <div className="carousel-item">
-        <img style={{ marginLeft: 5, marginRight: 5 }} src="http://centennialsmarciacharnizon.com.br/wp-content/uploads/2021/05/Mt_danc%CC%A7a.gif" />
+        <picture>
+          <source
+              srcSet="/mt_danca.gif"
+              type="image/webp"
+          />
+          <img
+              src="/mt_danca.gif"
+              alt=""
+          />
+        </picture>
       </div>
       <div className="carousel-item color-black">
-        <img style={{ marginLeft: 5, marginRight: 5 }} src="http://centennialsmarciacharnizon.com.br/wp-content/uploads/2021/05/Centennials_MarciaCharnizon_Laylamontagem-1024x768.jpg" />
+        <picture>
+          <source
+              srcSet="/laylamontagem.jpeg"
+              type="image/webp"
+          />
+          <img
+              src="/laylamontagem.jpeg"
+              alt=""
+          />
+        </picture>
       </div>
       <div className="carousel-item color-black">
         <video style={{ marginLeft: 5, marginRight: 5 }} loop controls>
@@ -28,12 +44,10 @@ function Carousel() {
   );
 }
 
-function Home() {
+export default function Home() {
   return (
-    <div className="App">
+    <div>
       <Carousel />
     </div>
-  );
+  )
 }
-
-export default Home
